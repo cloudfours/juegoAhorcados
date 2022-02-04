@@ -6,23 +6,26 @@ let palabrasConguion = palabra.replace(/./g, "_ ");
 
 let mostrar = document.querySelector("#salida").innerHTML = palabrasConguion;
 let botonAg = document.querySelector("#calcular");
+
+var contadorFallos = 1;
 botonAg.addEventListener('click', function(event) {
     event.preventDefault();
     let letra = document.querySelector("#text").value;
     let hasFallado = true;
-    let contadorFallos = 0;
 
     for (const i in palabra) {
         if (letra == palabra[i]) {
             palabrasConguion = palabrasConguion.replaceAt(i * 2, letra);
             hasFallado = false;
         }
-
-
-
     }
-    if (hasFallado) {
+
+    if(hasFallado){
+        ahorcar();
         contadorFallos++;
+    }
+
+    function ahorcar(){
         console.log(contadorFallos);
         if (contadorFallos == 1) {
             cabeza();
@@ -36,6 +39,23 @@ botonAg.addEventListener('click', function(event) {
 
             brazoDerecho();
         }
+    }
+
+    // if (hasFallado) {
+    //     // contadorFallos++;
+    //     console.log(contadorFallos);
+    //     if (contadorFallos == 1) {
+    //         cabeza();
+
+    //     }
+    //     if (contadorFallos == 2) {
+    //         cuerpo();
+    //     }
+
+    //     if (contadorFallos == 3) {
+
+    //         brazoDerecho();
+    //     }
 
 
 
@@ -49,7 +69,7 @@ botonAg.addEventListener('click', function(event) {
         //         alert("ganaste  el juego");
         //     }
 
-    }
+    // }
     mostrar = document.querySelector("#salida").innerHTML = palabrasConguion;
 });
 
