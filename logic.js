@@ -21,33 +21,38 @@ botonAg.addEventListener('click', function(event) {
 
 
     }
-    // if (hasFallado) {
-    //     contadorFallos++;
-    //     console.log(contadorFallos);
-    //     if (contadorFallos == 1) {
-    //         cabeza();
+    if (hasFallado) {
+        ahorcar();
+        contadorFallos++;
+    }
 
-    //     }
-    //     if (contadorFallos == 2) {
-    //         cuerpo();
-    //     }
+    function ahorcar() {
+        console.log(contadorFallos);
+        if (contadorFallos == 1) {
+            cabeza();
 
-    //     if (contadorFallos == 3) {
+        }
+        if (contadorFallos == 2) {
+            cuerpo();
+        }
 
-    //         brazoDerecho();
-    //     }
+        if (contadorFallos == 3) {
 
+            brazoDerecho();
+        }
+        if (contadorFallos == 4) {
+            brazoIzq();
 
+        }
+        if (contadorFallos == 5) {
+            piernaDer();
+        }
+        if (contadorFallos == 6) {
+            piernaIzq();
+        }
 
+    }
 
-
-    // if (hasFallado) {
-    //     contadorFallos++;
-    //     if (contadorFallos == 5) {
-    //         alert("perdiste el juego");
-    //     } else if (palabrasConguion.indexOf('_') < 0) {
-    //         alert("ganaste  el juego");
-    //     }
 
 
     mostrar = document.querySelector("#salida").innerHTML = palabrasConguion;
