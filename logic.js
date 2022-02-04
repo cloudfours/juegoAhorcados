@@ -33,6 +33,7 @@ botonAg.addEventListener('click', function(event) {
         }
 
         if (contadorFallos == 3) {
+
             brazoDerecho();
         }
 
