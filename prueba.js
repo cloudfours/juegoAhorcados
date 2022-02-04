@@ -3,15 +3,14 @@ let palabras = ['angel', 'moto', 'pedro', 'letra'];
 let palabra = palabras[Math.floor(Math.random() * palabras.length)];
 let palabrasConguion = palabra.replace(/./g, "_ ");
 
-
+let contadorFallos = 0;
 let mostrar = document.querySelector("#salida").innerHTML = palabrasConguion;
 let botonAg = document.querySelector("#calcular");
-botonAg.addEventListener('click', function(event) {
-    event.preventDefault();
-    let letra = document.querySelector("#text").value;
-    let hasFallado = true;
-    let contadorFallos = 0;
+let letra = document.querySelector("#text");
+document.addEventListener('keypress', function(event) {
 
+    letra = event.key;
+    let hasFallado = true;
     for (const i in palabra) {
         if (letra == palabra[i]) {
             palabrasConguion = palabrasConguion.replaceAt(i * 2, letra);
@@ -22,18 +21,21 @@ botonAg.addEventListener('click', function(event) {
 
     }
     if (hasFallado) {
-        ahorcar();
         contadorFallos++;
+        ahorcar();
+
     }
 
     function ahorcar() {
         console.log(contadorFallos);
         if (contadorFallos == 1) {
             cabeza();
+            console.log(contadorFallos);
 
         }
         if (contadorFallos == 2) {
             cuerpo();
+            console.log(contadorFallos);
         }
 
         if (contadorFallos == 3) {
@@ -57,6 +59,7 @@ botonAg.addEventListener('click', function(event) {
 
     mostrar = document.querySelector("#salida").innerHTML = palabrasConguion;
 });
+
 
 var pantalla = document.querySelector("#dibujo"); //recibira al canvas de html
 var pincel = pantalla.getContext("2d");
@@ -102,6 +105,8 @@ pincel.lineTo(340, 100);
 pincel.lineTo(340, 100);
 pincel.lineTo(340, 170);
 pincel.stroke();
+
+
 //cabeza
 function cabeza() {
     pincel.lineWidth = 2;
