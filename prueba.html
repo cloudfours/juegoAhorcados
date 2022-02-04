@@ -5,17 +5,28 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo.css" />
     <title>Document</title>
 </head>
 
 <body>
-    <h1>Juego del ahorcado</h1>
-    <input id="text" type="text" placeholder="ingrese datos"></input>
-    <button id="calcular"> cambiar</button>
-    <p id="salida"></p>
+    <h1 id="titulo">Juego del ahorcado</h1>
+    <div id="caja">
+        <button id="calcular"> Iniciar juego</button>
+        <input id="text" type="text" placeholder="ingrese letras" maxlength="6"></input>
+        <input id="agregar" type="text" placeholder="ingrese palabras"></input>
+        <button id="enviar">Agregar Palabra</button>
+    </div>
+    <h1 id="salida"></h1>
+    <div id="ganador">
+        <p>HAZ GANADO FELICIDADES !!!</p>
+    </div>
+    <div id="perder">
+        <p> HAZ PERDIDO!!!</p>
+    </div>
     <canvas id="dibujo" width="1200px" height="800px">
 
-    </canvas>
+        </canvas>
     <script src="prueba.js"></script>
 </body>
 
