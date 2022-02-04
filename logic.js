@@ -22,7 +22,7 @@ botonAg.addEventListener('click', function(event) {
 
     }
     if (hasFallado) {
-        contadorFallos += 1;
+        contadorFallos++;
         console.log(contadorFallos);
         if (contadorFallos == 1) {
             cabeza();
