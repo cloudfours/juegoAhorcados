@@ -21,35 +21,35 @@ botonAg.addEventListener('click', function(event) {
 
 
     }
-    if (hasFallado) {
-        contadorFallos++;
-        console.log(contadorFallos);
-        if (contadorFallos == 1) {
-            cabeza();
+    // if (hasFallado) {
+    //     contadorFallos++;
+    //     console.log(contadorFallos);
+    //     if (contadorFallos == 1) {
+    //         cabeza();
 
-        }
-        if (contadorFallos == 2) {
-            cuerpo();
-        }
+    //     }
+    //     if (contadorFallos == 2) {
+    //         cuerpo();
+    //     }
 
-        if (contadorFallos == 3) {
+    //     if (contadorFallos == 3) {
 
-            brazoDerecho();
-        }
-
-
+    //         brazoDerecho();
+    //     }
 
 
 
-        // if (hasFallado) {
-        //     contadorFallos++;
-        //     if (contadorFallos == 5) {
-        //         alert("perdiste el juego");
-        //     } else if (palabrasConguion.indexOf('_') < 0) {
-        //         alert("ganaste  el juego");
-        //     }
 
-    }
+
+    // if (hasFallado) {
+    //     contadorFallos++;
+    //     if (contadorFallos == 5) {
+    //         alert("perdiste el juego");
+    //     } else if (palabrasConguion.indexOf('_') < 0) {
+    //         alert("ganaste  el juego");
+    //     }
+
+
     mostrar = document.querySelector("#salida").innerHTML = palabrasConguion;
 });
 
